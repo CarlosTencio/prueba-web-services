@@ -10,6 +10,7 @@ const EditEmployee = ({ employee, updateEmployee }) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className='main'>
       <input 
         type="text" 
         value={name} 
@@ -17,6 +18,7 @@ const EditEmployee = ({ employee, updateEmployee }) => {
         placeholder="Edit employee name"
       />
       <button type="submit">Update Employee</button>
+      </div>
     </form>
   );
 };

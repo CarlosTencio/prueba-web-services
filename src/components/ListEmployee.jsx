@@ -1,4 +1,6 @@
 import React from 'react';
+import '../style/style.css';
+
 
 const EmployeeList = ({ items, onEdit, onDelete }) => {
   if (!items || items.length === 0) {
@@ -6,7 +8,8 @@ const EmployeeList = ({ items, onEdit, onDelete }) => {
   }
 
   return (
-    <table>
+    <div className='container-table'>
+      <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -25,6 +28,8 @@ const EmployeeList = ({ items, onEdit, onDelete }) => {
         ))}
       </tbody>
     </table>
+    </div>
+    
   );
 };
 

@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.example.com/employees'; // Reemplaza con la URL de tu API
+const urlApi = 'https://localhost:7262/api/Employees'; // Reemplaza con la URL de tu API
 
 export const fetchEmployees = async () => {
-  const response = await axios.get(API_URL);
+  const response = await axios.get(urlApi);
   return response.data;
 };
 
 export const addEmployee = async (employee) => {
-  const response = await axios.post(API_URL, employee, {
+  const response = await axios.post(urlApi, employee, {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -17,7 +17,7 @@ export const addEmployee = async (employee) => {
 };
 
 export const updateEmployee = async (employee) => {
-  const response = await axios.put(`${API_URL}/${employee.id}`, employee, {
+  const response = await axios.put(`${urlApi}/${employee.id}`, employee, {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -26,5 +26,5 @@ export const updateEmployee = async (employee) => {
 };
 
 export const deleteEmployee = async (id) => {
-  await axios.delete(`${API_URL}/${id}`);
+  await axios.delete(`${urlApi}/${id}`);
 };
