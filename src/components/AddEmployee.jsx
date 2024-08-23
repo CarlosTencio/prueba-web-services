@@ -12,13 +12,16 @@ const AddEmployee = ({ addEmployee }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input className='input'
+      <div className='main'>
+        <input className='input'
         type="text" 
         value={name} 
         onChange={(e) => setName(e.target.value)} 
         placeholder="Enter employee name"
       />
       <button type="submit" className='add-button'>Add Employee</button>
+      </div>
+      
     </form>
   );
 };
