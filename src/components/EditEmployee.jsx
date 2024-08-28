@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../style/style.css';
 
 const EditEmployee = ({ employee, updateEmployee }) => {
   const [name, setName] = useState(employee.name);
@@ -17,7 +18,7 @@ const EditEmployee = ({ employee, updateEmployee }) => {
         onChange={(e) => setName(e.target.value)} 
         placeholder="Edit employee name"
       />
-      <button type="submit">Update Employee</button>
+      <button type="submit" className='update-button'>Update Employee</button>
       </div>
     </form>
   );

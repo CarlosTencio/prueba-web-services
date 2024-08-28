@@ -21,8 +21,8 @@ const EmployeeList = ({ items, onEdit, onDelete }) => {
           <tr key={employee.id}>
             <td>{employee.name}</td>
             <td>
-              <button onClick={() => onEdit(employee)}>Edit</button>
-              <button onClick={() => onDelete(employee.id)}>Delete</button>
+              <button className='edit-button' onClick={() => onEdit(employee)}>Edit</button>
+              <button className='delete-button' onClick={() => onDelete(employee.id)}>Delete</button>
             </td>
           </tr>
         ))}
