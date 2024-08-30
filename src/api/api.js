@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const urlApi = 'https://localhost:7262/api/Employees'; // Reemplaza con la URL de tu API
+const urlApi = 'https://aplicadaweb-aghhgdgwgsddhcfd.eastus-01.azurewebsites.net/api/Employees'; // Reemplaza con la URL de tu API
 
 export const fetchEmployees = async () => {
   const response = await axios.get(urlApi);
