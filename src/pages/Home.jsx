@@ -69,29 +69,43 @@ const Home = () => {
     const data = await fetchDataNASA();
     setImg(data);
     setShowGallery(true);
-  }
+    setShowBackButton(true);  // Mostrar el botón de "Atrás"
+  };
 
+  const handleReloadPage = () => {
+    window.location.reload();
+  };
+
+  const [showBackButton, setShowBackButton] = useState(false);
+
+  
   return (
     <div>
-      <h1>CRUD Employees</h1>
-      <button onClick={handleGetImg}>Images</button>
-      {showGallery ? (<Gallery imgs={img} />
-      ) : (
-        <>
-          {editEmployee ? (
-            <EditEmployee employee={editEmployee} updateEmployee={handleUpdateEmployee} />
-          ) : (
-            <AddEmployee addEmployee={handleAddEmployee} />
-          )}
-          
-          <EmployeeList
-            items={employees}
-            onEdit={(employee) => setEditEmployee(employee)}
-            onDelete={handleDeleteEmployee}
-          />
-        </>
-      )}
-    </div>
+    <h1>Employee Management</h1>
+    <button className='btnGalery' onClick={handleGetImg}>Imágenes de la NASA</button>
+    
+    {showBackButton && (
+      <button className='btn' onClick={handleReloadPage}>Atrás</button>
+    )}
+    
+    {showGallery ? (
+      <Gallery imgs={img} />
+    ) : (
+      <>
+        {editEmployee ? (
+          <EditEmployee employee={editEmployee} updateEmployee={handleUpdateEmployee} />
+        ) : (
+          <AddEmployee addEmployee={handleAddEmployee} />
+        )}
+
+        <EmployeeList
+          items={employees}
+          onEdit={(employee) => setEditEmployee(employee)}
+          onDelete={handleDeleteEmployee}
+        />
+      </>
+    )}
+  </div>
 
   );
 };

@@ -4,7 +4,7 @@ import '../style/style.css';
 
 const EmployeeList = ({ items, onEdit, onDelete }) => {
   if (!items || items.length === 0) {
-    return <p>No employees available.</p>;
+    return <p></p>;
   }
 
   return (

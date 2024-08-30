@@ -50,7 +50,8 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
+    background-color: #00b1bb;
     font-size: 0.9em;
 }
 
@@ -92,7 +93,79 @@ button:hover {
     background-color: #005bf7;
 }
 
-img{
-    width: 50px;
-    height: 50px;
+.btnGalery{
+    background-color: #005bf7; 
+    margin-left: 10em;
+}
+
+.img {
+    position: relative;
+    width: 300px; /* Ajusta el tamaño de la card */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la card */
+    margin: 1em;
+
+}
+
+.img img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.img:hover img {
+    transform: scale(1.1); /* Zoom en hover */
+}
+
+.img div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: background 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.img:hover div {
+    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro en hover */
+}
+
+.img h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.img p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    opacity: 0.8; /* Texto más tenue */
+}
+
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px; /* Espacio entre las cartas */
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel .img {
+    flex: 0 0 auto; /* Evita que las cartas se redimensionen */
 }

@@ -1,7 +1,6 @@
 import React from "react";
 
-const  Card =({ url, title, date }) => {
-
+const Card = ({ url, title, date }) => {
     return (
         <div className="img">
             <img src={url} alt={title} />
@@ -12,5 +11,18 @@ const  Card =({ url, title, date }) => {
         </div>
     );
 };
+
+// const Carousel = ({ cards }) => {
+//     return (
+//         <div className="carousel-container">
+//             <div className="carousel">
+//                 {cards.map((card, index) => (
+//                     <Card key={index} url={card.url} title={card.title} date={card.date} />
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
+
 
 export default Card;
